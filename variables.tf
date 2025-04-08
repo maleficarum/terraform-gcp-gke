@@ -1,25 +1,34 @@
 variable "cluster_name" {
-    type = string
-    description = "Cluster name"
+  type        = string
+  description = "Cluster name"
 }
 
 variable "region" {
-    type = string
-    description = "Region"
+  type        = string
+  description = "Region"
 }
 
 variable "cluster_definition" {
-    type = object({
-      disk_size_gb = string,
-      cluster_cidr = string,
-      services_cidr = string
-    })
+  type = object({
+    cluster_cidr  = string,
+    services_cidr = string
+  })
 }
 
 variable "node_definition" {
-    type = object({
-      min_node_count = number,
-      max_node_count = number,
-      machine_type: string
-    })
+  type = object({
+    disk_size_gb = number,
+    machine_type : string,
+    node_count = number
+  })
+}
+
+variable "project" {
+  type = string
+  default = "Project ID"
+}
+
+variable "service_account" {
+  type = string
+  default = "Service Account"  
 }
