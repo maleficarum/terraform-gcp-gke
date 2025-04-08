@@ -13,6 +13,7 @@ variable "cluster_definition" {
     cluster_cidr  = string,
     services_cidr = string
   })
+  description = "Cluster definition"
 }
 
 variable "node_definition" {
@@ -21,14 +22,20 @@ variable "node_definition" {
     machine_type : string,
     node_count = number
   })
+  description = "Node definition"
 }
 
 variable "project" {
   type = string
-  default = "Project ID"
+  description = "Project ID"
 }
 
 variable "service_account" {
   type = string
-  default = "Service Account"  
+  description = "Service Account"  
+}
+
+variable "backend_bucket" {
+  type = string
+  description = "Backend bucket name"
 }

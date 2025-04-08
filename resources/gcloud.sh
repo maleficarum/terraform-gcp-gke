@@ -14,4 +14,5 @@ then
     kubectl apply -f ./resources/context.yaml
 else 
     gcloud projects remove-iam-policy-binding challenges-456002 --member="serviceAccount:challengesa@challenges-456002.iam.gserviceaccount.com" --role="roles/owner"
-fi
+fi 
+
