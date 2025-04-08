@@ -34,8 +34,3 @@ variable "service_account" {
   type = string
   description = "Service Account"  
 }
-
-variable "backend_bucket" {
-  type = string
-  description = "Backend bucket name"
-}
