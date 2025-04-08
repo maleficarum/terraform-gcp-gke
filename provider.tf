@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = var.backend_bucket
+    bucket = "8845d99337435890-terraform-remote-backend"
   }
 }
 
@@ -29,3 +29,4 @@ provider "google" {
   project = var.project
   region  = var.region
 }
+
