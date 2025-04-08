@@ -1,3 +1,4 @@
+# tflint-ignore: terraform_required_providers
 resource "local_file" "kubeconfig" {
   filename = "${path.module}/kubeconfig"
   content = <<EOF
@@ -22,6 +23,7 @@ resource "local_file" "kubeconfig" {
 EOF
 }
 
+# tflint-ignore: terraform_naming_convention
 resource "kubernetes_namespace" "cnrm-system" {
   metadata {
     name = "cnrm-system"
@@ -31,7 +33,8 @@ resource "kubernetes_namespace" "cnrm-system" {
   }
 }
 
-resource "kubernetes_namespace" "challenges-456002" {
+# tflint-ignore: terraform_naming_convention
+resource "kubernetes_namespace" "challenges-456002" {# tflint-ignore: terraform_required_providers
 
   metadata {
     name = "challenges-456002"

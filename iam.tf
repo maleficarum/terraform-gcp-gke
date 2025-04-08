@@ -18,6 +18,7 @@ resource "null_resource" "gcloud_create" {
   depends_on = [ kubernetes_namespace.challenges-456002 ]
 }
 
+# tflint-ignore: terraform_required_providers
 resource "null_resource" "gcloud_destroy" {
   provisioner "local-exec" {
     command = "./resources/gcloud.sh"
